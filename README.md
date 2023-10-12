@@ -43,12 +43,3 @@ positions_BN <- which(expression_data == max_BN, arr.ind = TRUE)
 
 
 
-
-
-
-
-
-
-
-
-max_np <- max(apply(expression[, np_columns, drop = FALSE], 1, max))
