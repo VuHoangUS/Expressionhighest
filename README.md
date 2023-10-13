@@ -58,7 +58,7 @@ value <- expression_data[759, 1]
 cat("ID của gen biểu hiện cao nhất là", value)
 
 # Tạo data frame của expression_highest
-Gene_ID_in_top_level_structure <- c("1087582/NP", "1087582/ACx", "1087582/VZ", "1087582/THM", "1087582/BN")
+Gene_ID_in_top_level_structure <- c("1087582 / NP", "1087582 / ACx", "1087582 / VZ", "1087582 / THM", "1087582 / BN")
 Value <- c(max_NP, max_ACx, max_VZ, max_THM, max_BN)
 expression_highest <- data.frame(Gene_ID_in_top_level_structure, Value)
 expression_highest
@@ -68,7 +68,7 @@ names <- expression_highest$Gene_ID_in_top_level_structure
 barplot(Value, 
 col = rainbow(5),
 ylim = c(0, 16), space = 0.5,
-ylab = "Giá trị", xlab = "Gene_ID/top_level_structure", main ="Gene biểu hiện mạnh nhất/Vùng não", names.arg = names)
+ylab = "Giá trị", xlab = "Gene_ID / top_level_structure", main ="Gene biểu hiện mạnh nhất / Vùng não", names.arg = names)
 
 # Thêm Value vào đồ thị
 text(1, 13, max_NP)
