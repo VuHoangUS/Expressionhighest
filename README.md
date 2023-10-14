@@ -69,7 +69,7 @@ names <- expression_highest$Gene_in_top_level_structure
 barplot(Value, 
 col = hsv(seq(0,1 - 1/12, length.out = 12), 0.5 , 1),
 ylim = c(0, 16), space = 0.5,
-ylab = "log2 RPKM", xlab = "Gene / Vùng não", main ="Biểu đồ thể hiện mức độ biểu hiện của gene biểu hiện mạnh nhất trên từng vùng não (log2 RPKM)", names.arg = names)
+ylab = "log2 RPKM", xlab = "Gene / Vùng não", main ="Biểu đồ thể hiện mức độ biểu hiện của gene biểu hiện mạnh nhất trên các vùng não (log2 RPKM)", names.arg = names)
 
 # Thêm Value vào đồ thị
 text(1, 13, max_NP)
