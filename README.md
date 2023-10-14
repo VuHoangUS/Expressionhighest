@@ -1,5 +1,3 @@
-
-
 setwd("D:/baitapR")
 row_data <- read.csv("rows.csv", header = TRUE, stringsAsFactors = FALSE)
 columns_data <- read.csv("columns.csv", header = TRUE, stringsAsFactors = FALSE)
@@ -61,13 +59,13 @@ value <- expression_data_1[759, 1]
 cat("Gen biểu hiện mạnh nhất trên các vùng não là", value)
 
 # Tạo data frame của expression_highest
-Gene_in_top_level_structure <- c("Neural plate", "Allocortex", "Ventricular zone", "Thalamus", "Basal nuclei")
+Top_level_structure <- c("Neural plate", "Allocortex", "Ventricular zone", "Thalamus", "Basal nuclei")
 Value <- c(max_NP, max_ACx, max_VZ, max_THM, max_BN)
-expression_highest <- data.frame(Gene_in_top_level_structure, Value)
+expression_highest <- data.frame(Top_level_structure, Value)
 expression_highest
 
 # Vẽ đồ thị expression_highest
-names <- expression_highest$Gene_in_top_level_structure
+names <- expression_highest$Top_level_structure
 barplot(Value, 
 col = hsv(seq(0,1 - 1/12, length.out = 12), 0.5 , 1),
 ylim = c(0, 16), space = 0.5,
