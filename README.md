@@ -1,3 +1,5 @@
+
+
 setwd("D:/baitapR")
 row_data <- read.csv("rows.csv", header = TRUE, stringsAsFactors = FALSE)
 columns_data <- read.csv("columns.csv", header = TRUE, stringsAsFactors = FALSE)
@@ -59,22 +61,21 @@ value <- expression_data_1[759, 1]
 cat("Gen biểu hiện mạnh nhất trên các vùng não là", value)
 
 # Tạo data frame của expression_highest
-Gene_in_top_level_structure <- c("Neuronatin / Neural plate", "Neuronatin / Allocortex", "Neuronatin / Ventricular zone", "Neuronatin / Thalamus", "Neuronatin / Basal nuclei")
+Gene_in_top_level_structure <- c("Neural plate", "Allocortex", "Ventricular zone", "Thalamus", "Basal nuclei")
 Value <- c(max_NP, max_ACx, max_VZ, max_THM, max_BN)
 expression_highest <- data.frame(Gene_in_top_level_structure, Value)
 expression_highest
 
-# Vẽ đồ thị hình hộp
+# Vẽ đồ thị expression_highest
 names <- expression_highest$Gene_in_top_level_structure
 barplot(Value, 
 col = hsv(seq(0,1 - 1/12, length.out = 12), 0.5 , 1),
 ylim = c(0, 16), space = 0.5,
-ylab = "log2 RPKM", xlab = "Gene / Vùng não", main ="Biểu đồ thể hiện mức độ biểu hiện của gene biểu hiện mạnh nhất trên các vùng não (log2 RPKM)", names.arg = names)
+ylab = "log2 RPKM", xlab = "Vùng não", main ="Biểu đồ thể hiện mức độ biểu hiện của gene Neuronatin trên các vùng não (log2 RPKM)", names.arg = names)
 
 # Thêm Value vào đồ thị
-text(1, 13, max_NP)
-text(2.5, 12, max_ACx)
-text(4, 12, max_VZ)
-text(5.5, 12.6, max_THM)
-text(7, 13, max_BN)
-
+text(1, 13, max_NP, cex=1.5)
+text(2.5, 12, max_ACx, cex=1.5)
+text(4, 12, max_VZ, cex=1.5)
+text(5.5, 12.6, max_THM, cex=1.5)
+text(7, 13, max_BN, cex=1.5)
