@@ -264,8 +264,8 @@ for (i in 1:10) {
   cat("Tên gen hàng", top_10_max_rows[i], "là", gen_max_MFC, "\n")
 }
 
-Anterior_(rostral)_cingulate_(medial prefrontal)_cortex <- data.frame(Gene_name = top_10_gen_name_MFC, Value = top_10_max_values)
-Anterior_(rostral)_cingulate_(medial prefrontal)_cortex
+Anterior_cingulate_cortex <- data.frame(Gene_name = top_10_gen_name_MFC, Value = top_10_max_values)
+Anterior_cingulate_cortex
 
 
 old_par <- par(mar = c(15, 6, 2, 0), xpd = NA)
@@ -534,7 +534,7 @@ parietal_neocortex <- data.frame(Gene_name = top_10_gen_name_PCx, Value = top_10
 parietal_neocortex
 
 
-old_par <- par(mar = c(15, 6, 2, 0), xpd = NA)
+old_par <- par(mar = c(15, 8, 2, 0), xpd = NA)
 
 # Tạo một vector chứa các giá trị width mới (2/3 của giá trị mặc định)
 
@@ -2330,3 +2330,4 @@ for (i in 1:10) {
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
+
